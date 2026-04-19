@@ -121,7 +121,7 @@ let config = {
     defaultBlockType: 'slate',
     verticalFormTabs: false,
     useEmailAsLogin: false,
-    persistentReducers: ['blocksClipboard'],
+    persistentReducers: ['blocksClipboard.cut', 'blocksClipboard.copy'],
     initialReducersBlacklist: [], // reducers in this list won't be hydrated in windows.__data
     asyncPropsExtenders: [getSiteAsyncPropExtender], // per route asyncConnect customizers
     contentIcons: contentIcons,
@@ -178,6 +178,11 @@ let config = {
     siteTitleFormat: {
       includeSiteTitle: false,
       titleAndSiteTitleSeparator: '-',
+    },
+    layout: {
+      // used to set `sizes` for images
+      tabletBreakpoint: 768,
+      defaultContainerWidth: 1200,
     },
   },
   experimental: {
